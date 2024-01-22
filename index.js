@@ -8,4 +8,6 @@ app.use(express.json());
 app.listen(4000, () => {
   console.log("server running at port: 3000");
   databaseConnection();
+  app.use("/api/v1", require("./authentication/auth.routes"));
+  app.use("/api/v1", require("./todo/todo.routes"));
 });

@@ -33,8 +33,8 @@ const SignIn = async (req, res) => {
       return res.sendStatus(401);
     }
     const tokenPayload = {
-      username: savedUser.username,
-      role: savedUser.role,
+      username: userExist.username,
+      role: userExist.role,
     };
     const access_token = generateAccessToken(tokenPayload);
     const refresh_token = generateRefreshToken(tokenPayload);

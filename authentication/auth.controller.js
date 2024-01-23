@@ -1,3 +1,5 @@
+const User = require("../models/user.schema");
+
 const SignUp = async (req, res) => {
 };
 

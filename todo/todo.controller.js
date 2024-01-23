@@ -1,3 +1,5 @@
+const Todo = require("../models/todo.schema");
+
 const GetTodos = async (req, res) => {
 };
 

@@ -7,6 +7,6 @@ const router = express.Router();
 router
   .post("/auth/signup", SignUp)
   .post("/auth/signin", SignIn)
-  .post("/auth/signout/:id", verifyJWT, SignOut)
+  .post("/auth/signout", verifyJWT, SignOut)
 
 module.exports = router;

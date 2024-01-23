@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 
-export const ACCESS_TOKEN_SECRET = "secret";
-export const REFRESH_TOKEN_SECRET = "refresh_secret";
+const ACCESS_TOKEN_SECRET = "secret";
+const REFRESH_TOKEN_SECRET = "refresh_secret";
 
 const generateAccessToken = (user) => {
   try {

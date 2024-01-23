@@ -48,7 +48,12 @@ const SignIn = async (req, res) => {
 };
 
 const SignOut = (req, res) => {
-    
+  try {
+    res.clearCookie("jwt", { httpOnly: true });
+    return res.status(200).json({ message: "user logged out" });
+  } catch (error) {
+    return res.status(500).json({ error: "error occured during signout" });
+  }
 };
 
 module.exports = { SignUp, SignIn, SignOut };

@@ -1,6 +1,6 @@
 const express = require("express");
 const { GetTodos, AddTodo } = require("./todo.controller");
-const verifyJWT = require("../middlewares/verifyJwt.middlware");
+const verifyJWT = require("../middlewares/verifyJwt.middleware");
 const verifyRole = require("../middlewares/verifyRole.middleware");
 
 const router = express.Router();

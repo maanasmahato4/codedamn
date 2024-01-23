@@ -11,8 +11,8 @@ const verifyJWT = async (req, res, next) => {
     }
     req.user = decoded;
     req.role = decoded.role;
+    next();
   });
-  next();
 };
 
 module.exports = verifyJWT;

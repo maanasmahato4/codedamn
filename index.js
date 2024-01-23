@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json());
 
-app.listen(4000, () => {
+app.listen(3000, () => {
   console.log("server running at port: 3000");
   databaseConnection();
   app.use("/api/v1", require("./authentication/auth.routes"));

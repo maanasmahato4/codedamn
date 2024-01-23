@@ -11,7 +11,7 @@
 	},
 	"devDependencies": {
     "mockgoose": "^8.0.4"
-  }
+  },
 	"scripts": {
 		"start": "node index.js"
 	}

@@ -1,11 +1,11 @@
 const express = require("express");
-const { SignUp, SignIn, SignOut } = require("./auth.controller");
+const { GetTodos, AddTodo } = require("./todo.controller");
+const verifyJWT = require("../middlewares/verifyJwt.middlware");
 
 const router = express.Router();
 
 router
-  .post("/auth/signup", SignUp)
-  .post("/auth/signin", SignIn)
-  .post("/auth/signout/:id", SignOut);
+  .get("/todo/todos", GetTodos)
+  .post("/todo/new", verifyJWT, AddTodo);
 
 module.exports = router;
